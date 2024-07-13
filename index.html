@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        /* General styling */
+        body {
+            background: #222222;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .navbar-brand {
+            margin-left: 30px;
+            filter: drop-shadow(1px 1px 5px aqua);
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: brush script mt, cursive;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav-item {
+            margin-left: 1rem;
+            margin-right: 50px;
+        }
+
+        .nav-link {
+            font-family: sans-serif;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            /* Garis bawah transparan */
+            transition: border-bottom 0.3s;
+            /* Transisi perubahan warna garis bawah */
+        }
+
+        .nav-link:hover {
+            color: rgb(255, 255, 255);
+            border-bottom-color: aqua;
+            /* Warna garis bawah pada hover */
+        }
+
+        /* Toggler button */
+        .navbar-toggler {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Name section styling */
+        .name {
+            margin-top: 50px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            padding: 50px 100px;
+            color: white;
+        }
+
+        .name h4 {
+            margin-bottom: 5px;
+        }
+
+        .name h1 {
+            color: aqua;
+            font-size: 38px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .name p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .name button {
+            background: aqua;
+            border-radius: 100px;
+            font-family: sans-serif;
+            margin-top: 20px;
+            filter: drop-shadow(1px 1px 5px aqua);
+        }
+
+        .profile-img {
+            filter: drop-shadow(1px 1px 20px aqua);
+            background: aqua;
+            width: 350px;
+            /* Sesuaikan ukuran dengan foto Anda */
+            height: auto;
+            margin-left: 360px;
+            /* Jarak antara foto dan teks */
+            border-radius: 50%;
+            /* Agar foto bundar jika perlu */
+            display: block;
+            /* Secara default, foto ditampilkan */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: aqua;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            .img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .foto img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                display: none;
+            }
+
+            .navbar-nav.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }
+
+            .name {
+                padding: 50px 20px;
+            }
+
+            .profile-img {
+                display: none;
+                /* Foto disembunyikan di layar ponsel */
+            }
+        }
+        @media (max-width: 768px) {
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                display: none;
+            }
+
+            .navbar-nav.active {
+                display: flex;
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .navbar-toggler {
+                display: block;
+            }}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">DBK</div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Portofolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cv.html">CV</a>
+            </li>
+        </ul>
+        <button class="navbar-toggler" onclick="toggleNavbar()">☰</button>
+    </nav>
+    <div class="name animate__animated animate__fadeInUp">
+        <div>
+            <h4>Hello, I'm Dickri</h4>
+            <h1>Web Developer</h1>
+            <p>Saya adalah seorang web developer yang bersemangat dalam menciptakan dan mengembangkan aplikasi web yang
+                inovatif dan fungsional.</p>
+            <div class="social-icons">
+                <a href="https://wa.me/6285727831822" aria-label="Phone"><i class="bi bi-telephone"></i></a>
+                <a href="mailto:your.kbambang202@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.instagram.com/dickri202/" aria-label="Instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://github.com/Dickri638" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+            <a href="cv.pdf" download="cv.pdf">
+                <button>Download CV</button>
+            </a>
+
+        </div>
+        <img src="ppr.png" alt="Profile Picture" class="profile-img animate__animated animate__zoomIn">
+    </div>
+
+    <script>
+        function toggleNavbar() {
+            var nav = document.querySelector('.navbar-nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
